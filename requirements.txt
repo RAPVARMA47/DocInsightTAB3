@@ -5,4 +5,4 @@ langchain_google_genai
 langchain_community
 pypdf
 sentence-transformers
-faiss-gpu
+faiss-cpu
