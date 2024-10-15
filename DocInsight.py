@@ -81,7 +81,7 @@ def get_summarized_response(embedding_path, file_upload_name):
     return st.session_state[cache_key]
 
 def main():
-    st.title("Document Q&A")
+    # st.title("Document Q&A")
 
     uploaded_file = st.file_uploader("Upload your file", type=["pdf", "csv", "docx", "xlsx", "xls", "txt"], label_visibility="collapsed")
     if uploaded_file is not None:
