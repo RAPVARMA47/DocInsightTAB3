@@ -4,3 +4,4 @@ python-docx
 langchain_google_genai
 langchain_community
 pypdf
+sentence-transformers
