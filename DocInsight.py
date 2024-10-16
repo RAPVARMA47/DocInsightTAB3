@@ -15,6 +15,15 @@ from langchain_core.documents import Document as LangchainDocument
 # Set up Gemini API key
 Gemini = st.secrets["GOOGLE_API_KEY"]
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", google_api_key=Gemini)
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+ 
 
 def load_docx(file_path):
     doc = Document(file_path)
