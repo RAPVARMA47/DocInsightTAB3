@@ -12,9 +12,6 @@ from langchain.chains import create_retrieval_chain
 from docx import Document
 from langchain_core.documents import Document as LangchainDocument
 
-# Set up Gemini API key
-Gemini = st.secrets["GOOGLE_API_KEY"]
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", google_api_key=Gemini)
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -23,6 +20,11 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
+# Set up Gemini API key
+Gemini = st.secrets["GOOGLE_API_KEY"]
+llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", google_api_key=Gemini)
+
  
 
 def load_docx(file_path):
